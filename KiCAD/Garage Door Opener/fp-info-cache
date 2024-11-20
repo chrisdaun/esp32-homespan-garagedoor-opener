@@ -1,4 +1,4 @@
-24239770051662274
+24251892953372596
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -54782,12 +54782,40 @@ SMD SMT ceramic resonator filter filter hand-soldering
 3
 3
 Custom Footprints
+CONN_ED555&slash_2DS_OST
+
+ED555/2DS 
+0
+2
+2
+Custom Footprints
+CONN_OSTTC040162_OST
+
+OSTTC040162 
+0
+4
+4
+Custom Footprints
+ESP32-C3 Super Micro
+
+
+0
+16
+16
+Custom Footprints
 JQC-3FF-S-Z
 relay Sanyou SRD series Form C http://www.sanyourelay.ca/public/products/pdf/SRD.pdf
 relay Sanyu SRD form C
 0
 5
 5
+Custom Footprints
+PinSocket_2x20_P2.54mm_Vertical_Centered_Anchor
+Through hole straight socket strip, 2x20, 2.54mm pitch, double cols (from Kicad 4.0.7), script generated
+Through hole socket strip THT 2x20 2.54mm double row
+0
+40
+40
 Custom Footprints
 SOIC127P600X175-8N
 
@@ -98139,3 +98167,24 @@ Varistor VF
 0
 2
 2
+esp32-homespan-garagedoor-opener
+ESP32-C3 Super Micro
+
+
+0
+16
+16
+esp32-homespan-garagedoor-opener
+JQC-3FF-S-Z
+relay Sanyou SRD series Form C http://www.sanyourelay.ca/public/products/pdf/SRD.pdf
+relay Sanyu SRD form C
+0
+5
+5
+esp32-homespan-garagedoor-opener
+YD-ESP32-S3
+ESP32-S3 general-purpose development board, based on ESP32-S3-WROOM-1 or ESP32-S3-WROOM-1U,It has all the ESP32-S3 pins exposed and is easy to connect and use.
+ESP32-S3
+0
+44
+44

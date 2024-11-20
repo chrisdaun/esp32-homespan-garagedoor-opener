@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "esp32-homespan-garagedoor-opener")(type "KiCad")(uri "${KIPRJMOD}/esp32-homespan-garagedoor-opener.kicad_sym")(options "")(descr ""))
+)
