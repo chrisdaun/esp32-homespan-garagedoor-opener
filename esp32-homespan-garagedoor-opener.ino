@@ -1,8 +1,8 @@
 #include "Arduino.h"
 #include "HomeSpan.h"
 
-#define PIN_RELAY 5             //Pin 5 on ESP32 board
-#define PIN_CLOSED_SENSOR 6     //Pin 6 on ESP32 board
+#define PIN_RELAY 11  //Pin 11 on ESP32 board
+#define PIN_CLOSED_SENSOR 12  //Pin 12 on ESP32 board
 #define HK_Open 0
 #define HK_Closed 1
 #define HK_Opening 2
@@ -84,16 +84,16 @@ void setup(){
   pinMode(PIN_CLOSED_SENSOR, INPUT_PULLUP);
   
   // place the following in setup() before homeSpan.begin()
-  homeSpan.setWifiCallback([](){homeSpan.setPairingCode("32313231");});
-  homeSpan.begin(Category::GarageDoorOpeners,"Chris Daun's Garage Door");
+  homeSpan.setWifiCallback([](){homeSpan.setPairingCode("11111111");});
+  homeSpan.begin(Category::GarageDoorOpeners,"Garage Door YD-ESP32-S3");
 
   new SpanAccessory();
     new Service::AccessoryInformation();
       new Characteristic::Identify();
       new Characteristic::Name("Garage Door");
       new Characteristic::Manufacturer("Christopher Daun");
-      new Characteristic::Model("ESP32-C3 Super Mini");
-      new Characteristic::SerialNumber("Nologo-esp32-c3-super-mini");
+      new Characteristic::Model("YD-ESP32-S3");
+      new Characteristic::SerialNumber("YD-ESP32-S3");
     new DEV_GarageDoor();
 
 } // end of setup()

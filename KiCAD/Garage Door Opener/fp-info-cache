@@ -1,4 +1,4 @@
-24239770051662274
+24244963844856159
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -54782,12 +54782,33 @@ SMD SMT ceramic resonator filter filter hand-soldering
 3
 3
 Custom Footprints
+CONN_ED555&slash_2DS_OST
+
+ED555/2DS 
+0
+2
+2
+Custom Footprints
+CONN_OSTTC040162_OST
+
+OSTTC040162 
+0
+4
+4
+Custom Footprints
 JQC-3FF-S-Z
 relay Sanyou SRD series Form C http://www.sanyourelay.ca/public/products/pdf/SRD.pdf
 relay Sanyu SRD form C
 0
 5
 5
+Custom Footprints
+PinSocket_2x20_P2.54mm_Vertical_Centered_Anchor
+Through hole straight socket strip, 2x20, 2.54mm pitch, double cols (from Kicad 4.0.7), script generated
+Through hole socket strip THT 2x20 2.54mm double row
+0
+40
+40
 Custom Footprints
 SOIC127P600X175-8N
 
