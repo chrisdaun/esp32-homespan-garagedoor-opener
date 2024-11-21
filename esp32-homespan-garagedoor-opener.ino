@@ -1,8 +1,8 @@
 #include "Arduino.h"
 #include "HomeSpan.h"
 
-#define PIN_RELAY 5 //Pin 5 on ESP32 board
-#define PIN_CLOSED_SENSOR 6 //Pin 6 on ESP32 board
+#define PIN_RELAY 11  //Pin 11 on ESP32 board
+#define PIN_CLOSED_SENSOR 12  //Pin 12 on ESP32 board
 #define HK_Open 0
 #define HK_Closed 1
 #define HK_Opening 2
@@ -46,11 +46,11 @@ struct DEV_GarageDoor : Service::GarageDoorOpener {     // A Garage Door Opener
 
   void pulse_door_relay(){
     Serial.println("Triggering door relay");
-    digitalWrite(LED_BUILTIN, HIGH);
-    digitalWrite(PIN_RELAY, LOW); // Relay is triggered active low
-    delay(PULSE_MS);
     digitalWrite(LED_BUILTIN, LOW);
-    digitalWrite(PIN_RELAY, HIGH);
+    digitalWrite(PIN_RELAY, HIGH); // Relay is triggered active low
+    delay(PULSE_MS);
+    digitalWrite(LED_BUILTIN, HIGH);
+    digitalWrite(PIN_RELAY, LOW);
     delay(MOVE_AWAY_MS); // Give the door time to move away from the closed sensor
   }
 
@@ -79,21 +79,21 @@ void setup(){
   Serial.begin(115200);
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(PIN_RELAY, OUTPUT);
-  digitalWrite(PIN_RELAY, HIGH);
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(PIN_RELAY, LOW);
+  digitalWrite(LED_BUILTIN, HIGH);
   pinMode(PIN_CLOSED_SENSOR, INPUT_PULLUP);
   
   // place the following in setup() before homeSpan.begin()
   homeSpan.setWifiCallback([](){homeSpan.setPairingCode("11111111");});
-  homeSpan.begin(Category::GarageDoorOpeners,"Chris Daun's Garage Door");
+  homeSpan.begin(Category::GarageDoorOpeners,"Garage Door YD-ESP32-S3");
 
   new SpanAccessory();
     new Service::AccessoryInformation();
       new Characteristic::Identify();
       new Characteristic::Name("Garage Door");
       new Characteristic::Manufacturer("Christopher Daun");
-      new Characteristic::Model("ESP32-S3");
-      new Characteristic::SerialNumber("esp32-s3-devkitc-1-n16r8v");
+      new Characteristic::Model("YD-ESP32-S3");
+      new Characteristic::SerialNumber("YD-ESP32-S3");
     new DEV_GarageDoor();
 
 } // end of setup()
