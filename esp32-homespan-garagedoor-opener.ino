@@ -46,10 +46,10 @@ struct DEV_GarageDoor : Service::GarageDoorOpener {     // A Garage Door Opener
 
   void pulse_door_relay(){
     Serial.println("Triggering door relay");
-    digitalWrite(LED_BUILTIN, LOW);
+    digitalWrite(LED_BUILTIN, HIGH);
     digitalWrite(PIN_RELAY, HIGH); // Relay is triggered active low
     delay(PULSE_MS);
-    digitalWrite(LED_BUILTIN, HIGH);
+    digitalWrite(LED_BUILTIN, LOW);
     digitalWrite(PIN_RELAY, LOW);
     delay(MOVE_AWAY_MS); // Give the door time to move away from the closed sensor
   }
@@ -80,7 +80,7 @@ void setup(){
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(PIN_RELAY, OUTPUT);
   digitalWrite(PIN_RELAY, LOW);
-  digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(LED_BUILTIN, LOW);
   pinMode(PIN_CLOSED_SENSOR, INPUT_PULLUP);
   
   // place the following in setup() before homeSpan.begin()
